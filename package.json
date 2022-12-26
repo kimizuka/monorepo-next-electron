@@ -9,6 +9,8 @@
   ],
   "scripts": {
     "dev:a": "yarn workspace next-electron-a dev",
-    "dev:b": "yarn workspace next-electron-b dev"
+    "dev:b": "yarn workspace next-electron-b dev",
+    "dist:a": "yarn workspace next-electron-a dist",
+    "dist:b": "yarn workspace next-electron-b dist"
   }
 }
