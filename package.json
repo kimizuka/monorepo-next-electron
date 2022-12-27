@@ -8,8 +8,8 @@
     "next-electron-b"
   ],
   "scripts": {
-    "dev:a": "yarn workspace next-electron-a dev",
-    "dev:b": "yarn workspace next-electron-b dev",
+    "dev:a": "yarn workspace next-electron-a dev --dev",
+    "dev:b": "yarn workspace next-electron-b dev --dev",
     "dist:a": "yarn workspace next-electron-a dist",
     "dist:b": "yarn workspace next-electron-b dist"
   }
