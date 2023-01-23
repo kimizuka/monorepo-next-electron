@@ -12,12 +12,7 @@ const electron_is_dev_1 = __importDefault(require("electron-is-dev"));
 const electron_next_1 = __importDefault(require("electron-next"));
 // Prepare the renderer once the app is ready
 electron_1.app.on('ready', async () => {
-    if (process.argv.includes('--dev')) {
-        await (0, electron_next_1.default)('./next-electron-a/renderer');
-    }
-    else {
-        await (0, electron_next_1.default)('./renderer');
-    }
+    await (0, electron_next_1.default)(electron_is_dev_1.default ? './next-electron-a/renderer' : './renderer');
     const mainWindow = new electron_1.BrowserWindow({
         width: 800,
         height: 600,

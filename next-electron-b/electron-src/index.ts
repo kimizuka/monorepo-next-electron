@@ -9,11 +9,7 @@ import prepareNext from 'electron-next'
 
 // Prepare the renderer once the app is ready
 app.on('ready', async () => {
-  if (process.argv.includes('--dev')) {
-    await prepareNext('./next-electron-b/renderer')
-  } else {
-    await prepareNext('./renderer')
-  }
+  await prepareNext(isDev ? './next-electron-b/renderer' : './renderer')
 
   const mainWindow = new BrowserWindow({
     width: 800,
